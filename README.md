@@ -82,7 +82,7 @@ Upon a successful boot loop, your terminal will display:
 
 `[SUCCESS] QuickSites Engine operational on port 5001`
 
-## 🧪= API Documentation & Endpoints
+##  API Documentation & Endpoints
 
 ###  Generate Layout Component
 
@@ -112,6 +112,6 @@ Upon a successful boot loop, your terminal will display:
 - **Endpoint:** `GET /health`
 - **Response:** `{ "status": "active", "service": "quicksites-ai-engine" }`
 
-## 🛡️ Operational Security & Hygiene
+##  Operational Security & Hygiene
 
 This project enforces strict security guardrails. The sensitive `.env` file containing proprietary API configurations is explicitly untracked via `.gitignore`. A `.env.example` blueprint is exposed as an alternative configuration reference for automated deployment mapping across production pipelines (e.g., Render, Railway, or AWS).
