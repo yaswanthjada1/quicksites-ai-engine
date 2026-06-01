@@ -1,10 +1,10 @@
-# QuickSites AI Engine 🤖🛰️
+# QuickSites AI Engine 
 
 An autonomous, infrastructure-agnostic Agentic AI code orchestration backend built for **QuickSites Solutions**. This service exposes a high-performance, secure REST API that interfaces with state-of-the-art open-weights foundation models to programmatically compile fully styled, responsive React components and layout modules on demand.
 
 ---
 
-## 🏗️ Architectural Overview
+##  Architectural Overview
 
 Unlike typical rigid API wrappers, the QuickSites AI Engine utilizes a modular pipeline designed to minimize token usage, handle user intent variations gracefully, and maintain extreme operational security.
 
@@ -28,7 +28,7 @@ graph TD
 
 ---
 
-## 🛠️ Tech Stack & Infrastructure
+##  Tech Stack & Infrastructure
 
 * **Runtime Environment:** Node.js (v22+)
 * **Backend Framework:** Express.js (ESM Module Architecture)
@@ -56,7 +56,7 @@ quicksites-ai-engine/
 └── server.js                   # Application bootstrap entry point
 ```
 
-## 🚀 Local Installation & Setup
+##  Local Installation & Setup
 
 ### 1. Clone and Install Dependencies
 ```bash
@@ -82,9 +82,9 @@ Upon a successful boot loop, your terminal will display:
 
 `[SUCCESS] QuickSites Engine operational on port 5001`
 
-## 🧪 API Documentation & Endpoints
+## 🧪= API Documentation & Endpoints
 
-### 📡 Generate Layout Component
+###  Generate Layout Component
 
 - **Endpoint:** `POST /api/generate`
 - **Headers:** `Content-Type: application/json`
@@ -107,7 +107,7 @@ Upon a successful boot loop, your terminal will display:
 }
 ```
 
-### 🩺 System Health Status
+###  System Health Status
 
 - **Endpoint:** `GET /health`
 - **Response:** `{ "status": "active", "service": "quicksites-ai-engine" }`
