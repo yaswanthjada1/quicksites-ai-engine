@@ -1,4 +1,3 @@
-// chat-agent.js
 import readline from 'readline';
 
 const rl = readline.createInterface({
@@ -6,9 +5,15 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+// 🧠 DYNAMIC PORT CHECKER FOR DEV TESTING
+// If your server tells you it booted on port 53241, you can run: NODE_PORT=53241 node scripts/chat-agent.js
+const TARGET_PORT = process.env.NODE_PORT || 5001;
+const API_URL = `http://localhost:${TARGET_PORT}/api/generate`;
+
 let sharedCodeState = ""; // Tracks your component's code across multiple prompts
 
 console.log("🤖 QuickSites AI Engine - Interactive Terminal Tester");
+console.log(`📡 Target API Gateway: ${API_URL}`);
 console.log("Type your component request below. Type 'exit' to quit.\n");
 
 function askPrompt() {
@@ -21,7 +26,8 @@ function askPrompt() {
     console.log("⏳ Brainstorming and writing code...");
 
     try {
-      const response = await fetch('http://localhost:5000/api/generate', {
+      // 📡 Dynamic endpoint targeting based on active infrastructure runtime
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -46,7 +52,10 @@ function askPrompt() {
         console.log("------------------------------------------------\n");
       }
     } catch (err) {
-      console.log(`❌ Network Failure: Could not reach the server. Make sure 'npm run dev' is running.`);
+      console.log(`\n❌ Network Failure: Could not reach the server at ${API_URL}`);
+      console.log(`👉 Check your server terminal. If it's running on a dynamic port (e.g., 53241), exit this script and run:`);
+      console.log(`   Windows (CMD):  set NODE_PORT=53241 && node scripts/chat-agent.js`);
+      console.log(`   Windows (PowerShell): $env:NODE_PORT="53241"; node scripts/chat-agent.js\n`);
     }
 
     askPrompt(); // Loop the interface
