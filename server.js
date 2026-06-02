@@ -41,6 +41,7 @@ app.get('/health', (req, res) => {
 // SERVER INITIALIZATION
 // ==========================================
 
-app.listen(PORT, () => {
-  console.log(`[SUCCESS] QuickSites Engine operational on port ${PORT}`);
+const server = app.listen(process.env.PORT || 0, () => {
+  const assignedPort = server.address().port;
+  console.log(`[SUCCESS] QuickSites Engine operational on port ${assignedPort}`);
 });
