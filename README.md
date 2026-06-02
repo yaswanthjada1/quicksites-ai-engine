@@ -22,6 +22,7 @@ graph TD
 
 ### Key Engineering Features:
 * **Sovereign Open-Source Core:** Powered by **Llama-3.3-70b-versatile** via the Groq Llama inference layer, eliminating vendor lock-in to closed corporate ecosystems.
+* **Real-Time Telemetry Logging:** Integrated customized middleware observers that stream live incoming request analytics and granular, structured error diagnostics directly to the terminal panel.
 * **Semantic Typo Correction:** Implements zero-token system-level instruction routing to handle human input spelling errors natively within the LLM's vector embedding space (resolves anomalies like `restatent` or `ketchin`).
 * **Deterministic Output Controls:** Configured with an extreme temperature precision of `0.1` and strict JSON schema enforcement to ensure compilation-ready React components with zero markdown leaks.
 * **Automated Scoping Interceptors:** Dynamically catches broad user intents (e.g., "make a website") and instructs the model to build high-conversion visual layout blueprints cleanly nested for iframes.
@@ -80,7 +81,7 @@ npm run dev
 
 Upon a successful boot loop, your terminal will display:
 
-`[SUCCESS] QuickSites Engine operational on port 5001`
+`[SUCCESS] QuickSites Engine operational on port ` (your port)
 
 ##  API Documentation & Endpoints
 
